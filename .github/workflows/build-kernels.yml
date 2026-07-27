@@ -409,13 +409,6 @@ jobs:
                   echo "--- custom.config ---"
                   cat arch/arm64/configs/custom.config
 
-            - name: Clean Source Tree
-              run: |
-                  set -euo pipefail
-                  cd "$GITHUB_WORKSPACE"
-                  echo "🧹 Cleaning source tree..."
-                  make ARCH=arm64 mrproper
-
             - name: Build kernel
               run: |
                   set -euo pipefail
